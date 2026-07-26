@@ -1,23 +1,18 @@
 # sinutre-back
+Backend do SiNutre — Sistema de Ingestão de Macronutrientes.
 
-Backend do **SiNutre — Sistema de Ingestão de Macronutrientes**.
+## 🛠️ Tecnologias
+TypeScript + Express + Prisma ORM + SQLite
 
-Stack: **TypeScript + Express + Prisma + SQLite**.
+## ✨ Funcionalidades
+- Login seguro via GitHub OAuth
+- Cadastro, edição e visualização de refeições
+- Cálculo automático de calorias e nutrientes
+- Registro de histórico diário e mensal
 
-> Versão didática usada em aula. Por enquanto cobre apenas:
-> - Login via GitHub OAuth
-> - Cadastro de uma refeição
-
-Estrutura mínima: apenas **rotas** e **controllers** (sem testes).
-
-## Setup
-
+## 🚀 Como instalar e rodar
 ```bash
 npm install
-cp .env.example .env          # preencha GITHUB_CLIENT_ID/SECRET e JWT_SECRET
-npx prisma migrate dev        # cria prisma/dev.db e aplica as tabelas
+cp .env.example .env
+npx prisma migrate dev
 npm run dev
-```
-
-O banco é um único arquivo em `prisma/dev.db` (ignorado pelo git). Para zerar,
-basta apagar o arquivo e rodar `npx prisma migrate dev` de novo.
