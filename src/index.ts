@@ -1,6 +1,14 @@
-import { app } from './app';
-import { env } from './config/env';
+import { app } from './app'
+import { prisma } from './prisma'
 
-app.listen(env.port, () => {
-  console.log(`SiNutre back rodando em http://localhost:${env.port}`);
-});
+const PORT = process.env.PORT || 3333
+
+async function startServer() {
+  await prisma.$connect()
+  
+  app.listen(PORT, () => {
+    console.log(`SiNutre back rodando em http://localhost:${PORT}`)
+  })
+}
+
+startServer()
