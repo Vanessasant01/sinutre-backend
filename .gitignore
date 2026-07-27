@@ -8,4 +8,4 @@ package-lock.json
 
 # SQLite local
 *.db
-*.db-journal
+*.db-journalrm
